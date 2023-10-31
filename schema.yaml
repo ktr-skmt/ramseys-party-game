@@ -1,0 +1,141 @@
+openapi: 3.0.3
+info:
+  title: Schema of Solver
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+    description: local server
+paths:
+  "/":
+    post:
+      description: Schema of Solver input
+      requestBody:
+        content:
+          "application/json":
+            schema:
+              $ref: "#/components/schemas/Input"
+            examples:
+              valid:
+                value:
+                  api_name: Solver
+                  name: "Taro"
+          "application/jsonl":
+            schema:
+              type: string
+            example: |
+              {"api_name": "Solver", "name": "Taro"}
+              {"api_name": "Solver", "name": "Jiro"}
+              {"api_name": "Solver", "name": "Siro"}
+      responses:
+        "200":
+          description: response
+          content:
+            "application/json":
+              schema:
+                $ref: "#/components/schemas/Output"
+              example:
+                api_name: Solver
+                api_version: "1.0.0"
+                text: Hello, Taro
+            "application/jsonl":
+              schema:
+                type: string
+              example: |
+                {"api_name": "Solver", "api_version": "1.0.0", "text": "Hello, Taro"}
+                {"api_name": "Solver", "api_version": "1.0.0", "text": "Hello, Jiro"}
+                {"api_name": "Solver", "api_version": "1.0.0", "text": "Hello, Siro"}
+        default:
+          description: error
+          content:
+            "application/json":
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                api_name: Solver
+                api_version: "1.0.0"
+                error_id: "error:uncaught_syntax_error"
+                error_message: "Unexpected token :"
+components:
+  schemas:
+    ApiName:
+      title: API Name
+      description: API name
+      type: string
+      pattern: ^Solver$
+    ApiVersion:
+      title: API Version
+      description: API version
+      type: string
+      pattern: ^[0-9]+\.[0-9]+\.[0-9]+((M|RC)-[0-9]+)*$
+    Input:
+      type: object
+      required:
+        - api_name
+        - name
+      properties:
+        api_name:
+          $ref: "#/components/schemas/ApiName"
+        name:
+          title: Name
+          description: name
+          type: string
+        documents:
+          type: array
+          items:
+            $ref: "#/components/schemas/Document"
+        color:
+          $ref: "#/components/schemas/Color"
+    Output:
+      type: object
+      required:
+        - api_name
+        - api_version
+        - text
+      properties:
+        api_name:
+          $ref: "#/components/schemas/ApiName"
+        api_version:
+          $ref: "#/components/schemas/ApiVersion"
+        text:
+          title: Text
+          description: text
+          type: string
+          minLength: 1
+    Error:
+      type: object
+      required:
+        - api_name
+        - api_version
+        - error_id
+        - error_message
+      properties:
+        api_name:
+          $ref: "#/components/schemas/ApiName"
+        api_version:
+          $ref: "#/components/schemas/ApiVersion"
+        error_id:
+          title: Error ID
+          description: error ID
+          type: string
+          pattern: ^error:.+$
+        error_message:
+          title: Error Message
+          description: error message
+          type: string
+    Document:
+      title: Document
+      type: object
+      required:
+        - text
+      properties:
+        text:
+          type: string
+        id:
+          type: string
+    Color:
+      title: Color
+      type: string
+      enum:
+        - RED
+        - GREEN
+        - BLUE
