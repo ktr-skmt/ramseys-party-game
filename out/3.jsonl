@@ -1,0 +1,7 @@
+{"turn": 3, "variant": 0, "e01": "red", "e02": "blue", "e03": "red", "e04": null, "e05": null, "e12": null, "e13": null, "e14": null, "e15": null, "e23": null, "e24": null, "e25": null, "e34": null, "e35": null, "e45": null}
+{"turn": 3, "variant": 1, "e01": "red", "e02": "blue", "e03": null, "e04": null, "e05": null, "e12": "red", "e13": null, "e14": null, "e15": null, "e23": null, "e24": null, "e25": null, "e34": null, "e35": null, "e45": null}
+{"turn": 3, "variant": 2, "e01": "red", "e02": "blue", "e03": null, "e04": null, "e05": null, "e12": null, "e13": "red", "e14": null, "e15": null, "e23": null, "e24": null, "e25": null, "e34": null, "e35": null, "e45": null}
+{"turn": 3, "variant": 3, "e01": "red", "e02": "blue", "e03": null, "e04": null, "e05": null, "e12": null, "e13": null, "e14": null, "e15": null, "e23": "red", "e24": null, "e25": null, "e34": null, "e35": null, "e45": null}
+{"turn": 3, "variant": 4, "e01": "red", "e02": "blue", "e03": null, "e04": null, "e05": null, "e12": null, "e13": null, "e14": null, "e15": null, "e23": null, "e24": null, "e25": null, "e34": "red", "e35": null, "e45": null}
+{"turn": 3, "variant": 5, "e01": "red", "e02": null, "e03": null, "e04": "red", "e05": null, "e12": null, "e13": null, "e14": null, "e15": null, "e23": "blue", "e24": null, "e25": null, "e34": null, "e35": null, "e45": null}
+{"turn": 3, "variant": 6, "e01": "red", "e02": null, "e03": null, "e04": null, "e05": null, "e12": null, "e13": null, "e14": null, "e15": null, "e23": "blue", "e24": null, "e25": null, "e34": null, "e35": null, "e45": "red"}

@@ -31,3 +31,4 @@ functions-framework~=3.2
 google-cloud-storage~=2.10
 
 ### additional deps ###
+networkx~=3.2.1
