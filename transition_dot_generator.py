@@ -8,6 +8,7 @@ from src.models.transition import Transition, json_to_transition
 
 PATH_TO_DIR: Final[Path] = Path(__file__).parent
 PATH_TO_OUT: Final[Path] = PATH_TO_DIR / "out"
+PATH_TO_SCRIPT: Final[Path] = PATH_TO_DIR / "docs" / "script"
 
 
 def nodes_text(turn: int, number_of_variants: int) -> str:
@@ -112,7 +113,223 @@ def main() -> None:
     for turn in range(1, 15):
         with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
-    with open(PATH_TO_DIR / "docs" / "script" / "dot.js", mode="w", encoding="utf-8") as f:
+    with open(PATH_TO_SCRIPT / "dot.js", mode="w", encoding="utf-8") as f:
+        text: str = (
+            "const dot = {'description': [["
+            + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
+            + "]]}"
+        )
+        f.write(text)
+
+    turn_number_of_variants_pairs: list[tuple[int, int]] = []
+    for turn in range(1, 6):
+        with open(PATH_TO_OUT / f"{turn}.jsonl", mode="r", encoding="utf-8") as f:
+            states: list[State] = [from_dict_to_state(json.loads(line)) for line in f]
+        turn_number_of_variants_pairs.append((turn, len(states)))
+    with open(PATH_TO_OUT / "territories.jsonl", mode="r", encoding="utf-8") as f:
+        territories: list[Territory] = [json_to_territory(json.loads(line)) for line in f]
+    turn_variant_color_tuples: list[tuple[int, int, str]] = [
+        (territory.turn, territory.variant, territory.what_color_wins)
+        for territory in territories
+        if territory.turn < 6
+    ]
+    transitions: list[Transition] = []
+    for turn in range(1, 6):
+        with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
+            transitions.extend([json_to_transition(json.loads(line)) for line in f])
+    with open(PATH_TO_SCRIPT / "transition0-5" / "dot.js", mode="w", encoding="utf-8") as f:
+        text: str = (
+            "const dot = {'description': [["
+            + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
+            + "]]}"
+        )
+        f.write(text)
+
+    turn_number_of_variants_pairs: list[tuple[int, int]] = []
+    for turn in range(5, 7):
+        with open(PATH_TO_OUT / f"{turn}.jsonl", mode="r", encoding="utf-8") as f:
+            states: list[State] = [from_dict_to_state(json.loads(line)) for line in f]
+        turn_number_of_variants_pairs.append((turn, len(states)))
+    with open(PATH_TO_OUT / "territories.jsonl", mode="r", encoding="utf-8") as f:
+        territories: list[Territory] = [json_to_territory(json.loads(line)) for line in f]
+    turn_variant_color_tuples: list[tuple[int, int, str]] = [
+        (territory.turn, territory.variant, territory.what_color_wins)
+        for territory in territories
+        if 5 <= territory.turn < 7
+    ]
+    transitions: list[Transition] = []
+    for turn in range(5, 7):
+        with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
+            transitions.extend([json_to_transition(json.loads(line)) for line in f])
+    with open(PATH_TO_SCRIPT / "transition5-6" / "dot.js", mode="w", encoding="utf-8") as f:
+        text: str = (
+            "const dot = {'description': [["
+            + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
+            + "]]}"
+        )
+        f.write(text)
+
+    turn_number_of_variants_pairs: list[tuple[int, int]] = []
+    for turn in range(6, 8):
+        with open(PATH_TO_OUT / f"{turn}.jsonl", mode="r", encoding="utf-8") as f:
+            states: list[State] = [from_dict_to_state(json.loads(line)) for line in f]
+        turn_number_of_variants_pairs.append((turn, len(states)))
+    with open(PATH_TO_OUT / "territories.jsonl", mode="r", encoding="utf-8") as f:
+        territories: list[Territory] = [json_to_territory(json.loads(line)) for line in f]
+    turn_variant_color_tuples: list[tuple[int, int, str]] = [
+        (territory.turn, territory.variant, territory.what_color_wins)
+        for territory in territories
+        if 6 <= territory.turn < 8
+    ]
+    transitions: list[Transition] = []
+    for turn in range(6, 8):
+        with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
+            transitions.extend([json_to_transition(json.loads(line)) for line in f])
+    with open(PATH_TO_SCRIPT / "transition6-7" / "dot.js", mode="w", encoding="utf-8") as f:
+        text: str = (
+            "const dot = {'description': [["
+            + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
+            + "]]}"
+        )
+        f.write(text)
+
+    turn_number_of_variants_pairs: list[tuple[int, int]] = []
+    for turn in range(7, 9):
+        with open(PATH_TO_OUT / f"{turn}.jsonl", mode="r", encoding="utf-8") as f:
+            states: list[State] = [from_dict_to_state(json.loads(line)) for line in f]
+        turn_number_of_variants_pairs.append((turn, len(states)))
+    with open(PATH_TO_OUT / "territories.jsonl", mode="r", encoding="utf-8") as f:
+        territories: list[Territory] = [json_to_territory(json.loads(line)) for line in f]
+    turn_variant_color_tuples: list[tuple[int, int, str]] = [
+        (territory.turn, territory.variant, territory.what_color_wins)
+        for territory in territories
+        if 7 <= territory.turn < 9
+    ]
+    transitions: list[Transition] = []
+    for turn in range(7, 9):
+        with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
+            transitions.extend([json_to_transition(json.loads(line)) for line in f])
+    with open(PATH_TO_SCRIPT / "transition7-8" / "dot.js", mode="w", encoding="utf-8") as f:
+        text: str = (
+            "const dot = {'description': [["
+            + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
+            + "]]}"
+        )
+        f.write(text)
+
+    turn_number_of_variants_pairs: list[tuple[int, int]] = []
+    for turn in range(8, 10):
+        with open(PATH_TO_OUT / f"{turn}.jsonl", mode="r", encoding="utf-8") as f:
+            states: list[State] = [from_dict_to_state(json.loads(line)) for line in f]
+        turn_number_of_variants_pairs.append((turn, len(states)))
+    with open(PATH_TO_OUT / "territories.jsonl", mode="r", encoding="utf-8") as f:
+        territories: list[Territory] = [json_to_territory(json.loads(line)) for line in f]
+    turn_variant_color_tuples: list[tuple[int, int, str]] = [
+        (territory.turn, territory.variant, territory.what_color_wins)
+        for territory in territories
+        if 8 <= territory.turn < 10
+    ]
+    transitions: list[Transition] = []
+    for turn in range(8, 10):
+        with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
+            transitions.extend([json_to_transition(json.loads(line)) for line in f])
+    with open(PATH_TO_SCRIPT / "transition8-9" / "dot.js", mode="w", encoding="utf-8") as f:
+        text: str = (
+            "const dot = {'description': [["
+            + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
+            + "]]}"
+        )
+        f.write(text)
+
+    turn_number_of_variants_pairs: list[tuple[int, int]] = []
+    for turn in range(9, 11):
+        with open(PATH_TO_OUT / f"{turn}.jsonl", mode="r", encoding="utf-8") as f:
+            states: list[State] = [from_dict_to_state(json.loads(line)) for line in f]
+        turn_number_of_variants_pairs.append((turn, len(states)))
+    with open(PATH_TO_OUT / "territories.jsonl", mode="r", encoding="utf-8") as f:
+        territories: list[Territory] = [json_to_territory(json.loads(line)) for line in f]
+    turn_variant_color_tuples: list[tuple[int, int, str]] = [
+        (territory.turn, territory.variant, territory.what_color_wins)
+        for territory in territories
+        if 9 <= territory.turn < 11
+    ]
+    transitions: list[Transition] = []
+    for turn in range(9, 11):
+        with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
+            transitions.extend([json_to_transition(json.loads(line)) for line in f])
+    with open(PATH_TO_SCRIPT / "transition9-10" / "dot.js", mode="w", encoding="utf-8") as f:
+        text: str = (
+            "const dot = {'description': [["
+            + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
+            + "]]}"
+        )
+        f.write(text)
+
+    turn_number_of_variants_pairs: list[tuple[int, int]] = []
+    for turn in range(10, 12):
+        with open(PATH_TO_OUT / f"{turn}.jsonl", mode="r", encoding="utf-8") as f:
+            states: list[State] = [from_dict_to_state(json.loads(line)) for line in f]
+        turn_number_of_variants_pairs.append((turn, len(states)))
+    with open(PATH_TO_OUT / "territories.jsonl", mode="r", encoding="utf-8") as f:
+        territories: list[Territory] = [json_to_territory(json.loads(line)) for line in f]
+    turn_variant_color_tuples: list[tuple[int, int, str]] = [
+        (territory.turn, territory.variant, territory.what_color_wins)
+        for territory in territories
+        if 10 <= territory.turn < 12
+    ]
+    transitions: list[Transition] = []
+    for turn in range(10, 12):
+        with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
+            transitions.extend([json_to_transition(json.loads(line)) for line in f])
+    with open(PATH_TO_SCRIPT / "transition10-11" / "dot.js", mode="w", encoding="utf-8") as f:
+        text: str = (
+            "const dot = {'description': [["
+            + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
+            + "]]}"
+        )
+        f.write(text)
+
+    turn_number_of_variants_pairs: list[tuple[int, int]] = []
+    for turn in range(11, 13):
+        with open(PATH_TO_OUT / f"{turn}.jsonl", mode="r", encoding="utf-8") as f:
+            states: list[State] = [from_dict_to_state(json.loads(line)) for line in f]
+        turn_number_of_variants_pairs.append((turn, len(states)))
+    with open(PATH_TO_OUT / "territories.jsonl", mode="r", encoding="utf-8") as f:
+        territories: list[Territory] = [json_to_territory(json.loads(line)) for line in f]
+    turn_variant_color_tuples: list[tuple[int, int, str]] = [
+        (territory.turn, territory.variant, territory.what_color_wins)
+        for territory in territories
+        if 11 <= territory.turn < 13
+    ]
+    transitions: list[Transition] = []
+    for turn in range(11, 13):
+        with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
+            transitions.extend([json_to_transition(json.loads(line)) for line in f])
+    with open(PATH_TO_SCRIPT / "transition11-12" / "dot.js", mode="w", encoding="utf-8") as f:
+        text: str = (
+            "const dot = {'description': [["
+            + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
+            + "]]}"
+        )
+        f.write(text)
+
+    turn_number_of_variants_pairs: list[tuple[int, int]] = []
+    for turn in range(12, 15):
+        with open(PATH_TO_OUT / f"{turn}.jsonl", mode="r", encoding="utf-8") as f:
+            states: list[State] = [from_dict_to_state(json.loads(line)) for line in f]
+        turn_number_of_variants_pairs.append((turn, len(states)))
+    with open(PATH_TO_OUT / "territories.jsonl", mode="r", encoding="utf-8") as f:
+        territories: list[Territory] = [json_to_territory(json.loads(line)) for line in f]
+    turn_variant_color_tuples: list[tuple[int, int, str]] = [
+        (territory.turn, territory.variant, territory.what_color_wins)
+        for territory in territories
+        if 12 <= territory.turn
+    ]
+    transitions: list[Transition] = []
+    for turn in range(12, 15):
+        with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
+            transitions.extend([json_to_transition(json.loads(line)) for line in f])
+    with open(PATH_TO_SCRIPT / "transition12-14" / "dot.js", mode="w", encoding="utf-8") as f:
         text: str = (
             "const dot = {'description': [["
             + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
