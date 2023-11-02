@@ -50,7 +50,7 @@ def transition_dot(
     turn_variant_color_tuples: list[tuple[int, int, str]],
 ) -> str:
     return (
-        "digraph transitions {"
+        "digraph graph_name {"
         + "  graph ["
         + '    charset = "UTF-8";'
         + '    label = "K6 - Transitions",'

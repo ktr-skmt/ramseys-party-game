@@ -36,7 +36,7 @@ def edges_dot(edges: list[tuple[int, int, dict[str, str]]]) -> str:
 
 def state_dot(turn: int, variant: int, edges: list[tuple[int, int, dict[str, str]]]) -> str:
     return (
-        f"digraph t{turn}_{variant + 1} "
+        "digraph graph_name "
         + "{"
         + "  graph ["
         + '    charset = "UTF-8";'
@@ -93,16 +93,7 @@ def state_dot(turn: int, variant: int, edges: list[tuple[int, int, dict[str, str
     )
 
 
-# def get_color(turn: int, variant: int, territories: list[Territory]) -> str | None:
-#     for territory in territories:
-#         if territory.turn == turn and territory.variant == variant:
-#             return territory.what_color_wins
-#     return None
-
-
 def main() -> None:
-    # with open(PATH_TO_OUT / "territories.jsonl", mode="r", encoding="utf-8") as f:
-    #     territories: list[Territory] = [json_to_territory(json.loads(line)) for line in f]
     for turn in range(1, 15):
         with open(PATH_TO_OUT / f"{turn}.jsonl", mode="r", encoding="utf-8") as f:
             states: list[State] = [from_dict_to_state(json.loads(line)) for line in f]

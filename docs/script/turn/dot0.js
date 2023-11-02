@@ -1,4 +1,4 @@
-export const dot = {
+export const dot0 = {
   'description': [
     [
       'digraph graph_name {',
