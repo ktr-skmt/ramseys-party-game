@@ -481,8 +481,7 @@ def main() -> None:
                             + "".join(
                                 [
                                     f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                    for variant in range(len(states))
-                                    if variant in range(base, base + 10)
+                                    for variant in range(10)
                                 ]
                             )
                             + f'<script type="module" src="script/turn/turn{turn}_{base + 1}_{base + 10}.js"></script>'
@@ -514,11 +513,7 @@ def main() -> None:
                         + '<script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>'
                         + '<script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>'
                         + "".join(
-                            [
-                                f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                for variant in range(len(states))
-                                if variant in range(20, 25)
-                            ]
+                            [f'<div id="graph{variant}" style="text-align: center;"></div>' for variant in range(5)]
                         )
                         + f'<script type="module" src="script/turn/turn{turn}_21_25.js"></script>'
                         + "</body>"
@@ -556,8 +551,7 @@ def main() -> None:
                             + "".join(
                                 [
                                     f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                    for variant in range(len(states))
-                                    if variant in range(base, base + 10)
+                                    for variant in range(10)
                                 ]
                             )
                             + f'<script type="module" src="script/turn/turn{turn}_{base + 1}_{base + 10}.js"></script>'
@@ -589,11 +583,7 @@ def main() -> None:
                         + '<script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>'
                         + '<script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>'
                         + "".join(
-                            [
-                                f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                for variant in range(len(states))
-                                if variant in range(60, 64)
-                            ]
+                            [f'<div id="graph{variant}" style="text-align: center;"></div>' for variant in range(4)]
                         )
                         + f'<script type="module" src="script/turn/turn{turn}_61_64.js"></script>'
                         + "</body>"
@@ -631,8 +621,7 @@ def main() -> None:
                             + "".join(
                                 [
                                     f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                    for variant in range(len(states))
-                                    if variant in range(base, base + 10)
+                                    for variant in range(10)
                                 ]
                             )
                             + f'<script type="module" src="script/turn/turn{turn}_{base + 1}_{base + 10}.js"></script>'
@@ -664,11 +653,7 @@ def main() -> None:
                         + '<script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>'
                         + '<script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>'
                         + "".join(
-                            [
-                                f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                for variant in range(len(states))
-                                if variant in range(160, 166)
-                            ]
+                            [f'<div id="graph{variant}" style="text-align: center;"></div>' for variant in range(6)]
                         )
                         + f'<script type="module" src="script/turn/turn{turn}_161_166.js"></script>'
                         + "</body>"
@@ -706,8 +691,7 @@ def main() -> None:
                             + "".join(
                                 [
                                     f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                    for variant in range(len(states))
-                                    if variant in range(base, base + 10)
+                                    for variant in range(10)
                                 ]
                             )
                             + f'<script type="module" src="script/turn/turn{turn}_{base + 1}_{base + 10}.js"></script>'
@@ -739,11 +723,7 @@ def main() -> None:
                         + '<script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>'
                         + '<script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>'
                         + "".join(
-                            [
-                                f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                for variant in range(len(states))
-                                if variant in range(300, 303)
-                            ]
+                            [f'<div id="graph{variant}" style="text-align: center;"></div>' for variant in range(3)]
                         )
                         + f'<script type="module" src="script/turn/turn{turn}_301_303.js"></script>'
                         + "</body>"
@@ -781,8 +761,7 @@ def main() -> None:
                             + "".join(
                                 [
                                     f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                    for variant in range(len(states))
-                                    if variant in range(base, base + 10)
+                                    for variant in range(10)
                                 ]
                             )
                             + f'<script type="module" src="script/turn/turn{turn}_{base + 1}_{base + 10}.js"></script>'
@@ -822,8 +801,7 @@ def main() -> None:
                             + "".join(
                                 [
                                     f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                    for variant in range(len(states))
-                                    if variant in range(base, base + 10)
+                                    for variant in range(10)
                                 ]
                             )
                             + f'<script type="module" src="script/turn/turn{turn}_{base + 1}_{base + 10}.js"></script>'
@@ -855,11 +833,7 @@ def main() -> None:
                         + '<script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>'
                         + '<script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>'
                         + "".join(
-                            [
-                                f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                for variant in range(len(states))
-                                if variant in range(480, 489)
-                            ]
+                            [f'<div id="graph{variant}" style="text-align: center;"></div>' for variant in range(9)]
                         )
                         + f'<script type="module" src="script/turn/turn{turn}_481_489.js"></script>'
                         + "</body>"
@@ -897,8 +871,7 @@ def main() -> None:
                             + "".join(
                                 [
                                     f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                    for variant in range(len(states))
-                                    if variant in range(base, base + 10)
+                                    for variant in range(10)
                                 ]
                             )
                             + f'<script type="module" src="script/turn/turn{turn}_{base + 1}_{base + 10}.js"></script>'
@@ -930,11 +903,7 @@ def main() -> None:
                         + '<script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>'
                         + '<script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>'
                         + "".join(
-                            [
-                                f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                for variant in range(len(states))
-                                if variant in range(410, 415)
-                            ]
+                            [f'<div id="graph{variant}" style="text-align: center;"></div>' for variant in range(5)]
                         )
                         + f'<script type="module" src="script/turn/turn{turn}_411_415.js"></script>'
                         + "</body>"
@@ -972,8 +941,7 @@ def main() -> None:
                             + "".join(
                                 [
                                     f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                    for variant in range(len(states))
-                                    if variant in range(base, base + 10)
+                                    for variant in range(10)
                                 ]
                             )
                             + f'<script type="module" src="script/turn/turn{turn}_{base + 1}_{base + 10}.js"></script>'
@@ -1005,11 +973,7 @@ def main() -> None:
                         + '<script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>'
                         + '<script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>'
                         + "".join(
-                            [
-                                f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                for variant in range(len(states))
-                                if variant in range(180, 183)
-                            ]
+                            [f'<div id="graph{variant}" style="text-align: center;"></div>' for variant in range(3)]
                         )
                         + f'<script type="module" src="script/turn/turn{turn}_181_183.js"></script>'
                         + "</body>"
@@ -1047,8 +1011,7 @@ def main() -> None:
                             + "".join(
                                 [
                                     f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                    for variant in range(len(states))
-                                    if variant in range(base, base + 10)
+                                    for variant in range(10)
                                 ]
                             )
                             + f'<script type="module" src="script/turn/turn{turn}_{base + 1}_{base + 10}.js"></script>'
@@ -1080,11 +1043,7 @@ def main() -> None:
                         + '<script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>'
                         + '<script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>'
                         + "".join(
-                            [
-                                f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                for variant in range(len(states))
-                                if variant in range(70, 71)
-                            ]
+                            [f'<div id="graph{variant}" style="text-align: center;"></div>' for variant in range(1)]
                         )
                         + f'<script type="module" src="script/turn/turn{turn}_71.js"></script>'
                         + "</body>"
@@ -1122,8 +1081,7 @@ def main() -> None:
                             + "".join(
                                 [
                                     f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                    for variant in range(len(states))
-                                    if variant in range(base, base + 10)
+                                    for variant in range(10)
                                 ]
                             )
                             + f'<script type="module" src="script/turn/turn{turn}_{base + 1}_{base + 10}.js"></script>'
@@ -1155,11 +1113,7 @@ def main() -> None:
                         + '<script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>'
                         + '<script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>'
                         + "".join(
-                            [
-                                f'<div id="graph{variant}" style="text-align: center;"></div>'
-                                for variant in range(len(states))
-                                if variant in range(10, 12)
-                            ]
+                            [f'<div id="graph{variant}" style="text-align: center;"></div>' for variant in range(2)]
                         )
                         + f'<script type="module" src="script/turn/turn{turn}_11_12.js"></script>'
                         + "</body>"
