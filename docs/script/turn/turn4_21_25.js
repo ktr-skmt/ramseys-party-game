@@ -1,0 +1,1 @@
+import {dot4_21_25} from './dot4_21_25.js';for (let i = 20; i < 25; i++) { d3.select(`#graph${i}`).graphviz().fade(false).renderDot(dot4_21_25.description[i].join('')); }

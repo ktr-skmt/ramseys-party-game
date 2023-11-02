@@ -3,36 +3,326 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="style/focus.css">
-  <link rel="stylesheet" type="text/css" href="style/micromodal.css">
 </head>
 
 <body>
-  <div class="modal micromodal-slide" id="modal-graph" aria-hidden="true">
-    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-graph-title">
-        <header class="modal__header">
-          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-        </header>
-        <main class="modal__content" id="modal-graph-content">
-          <div id="graph" style="text-align: center;"></div>
-        </main>
-        <footer class="modal__footer">
-          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
-        </footer>
-      </div>
-    </div>
-  </div>
-  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-  <script src="//d3js.org/d3.v4.min.js"></script>
-  <script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>
-  <script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>
-  <script src="script/dot.js"></script>
-  <div id="transitions" style="text-align: center;"></div>
-  <script type="module">
-    import { transition } from './script/transitions.js'
-    window.onload = transition()
-  </script>
+  <table>
+    <tr>
+      <th>Turn</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>13</th>
+      <th>14</th>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn0" target="_blank">1</a></li>
+        </ul>
+      </td>
+
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn1" target="_blank">1</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn2" target="_blank">1-2</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn3" target="_blank">1-7</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn4_1-10" target="_blank">1-10</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn4_11-20" target="_blank">11-20</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn4_21-25" target="_blank">21-25</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn5_1-10" target="_blank">1-10</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn5_11-20" target="_blank">11-20</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn5_21-30" target="_blank">21-30</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn5_31-40" target="_blank">31-40</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn5_41-50" target="_blank">41-50</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn5_51-60" target="_blank">51-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn5_61-64" target="_blank">61-64</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_1-10" target="_blank">1-10</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_11-20" target="_blank">11-20</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_21-30" target="_blank">21-30</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_31-40" target="_blank">31-40</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_41-50" target="_blank">41-50</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_51-60" target="_blank">51-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_61-70" target="_blank">61-70</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_71-80" target="_blank">71-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_81-90" target="_blank">81-90</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_91-100" target="_blank">91-100</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_101-110" target="_blank">101-110</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_111-120" target="_blank">111-120</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_121-130" target="_blank">121-130</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_131-140" target="_blank">131-140</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_141-150" target="_blank">141-150</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_151-160" target="_blank">151-160</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn6_161-166" target="_blank">161-166</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_1-10" target="_blank">1-10</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_11-20" target="_blank">11-20</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_21-30" target="_blank">21-30</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_31-40" target="_blank">31-40</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_41-50" target="_blank">41-50</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_51-60" target="_blank">51-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_61-70" target="_blank">61-70</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_71-80" target="_blank">71-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_81-90" target="_blank">81-90</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_91-100" target="_blank">91-100</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_101-110" target="_blank">101-110</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_111-120" target="_blank">111-120</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_121-130" target="_blank">121-130</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_131-140" target="_blank">131-140</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_141-150" target="_blank">141-150</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_151-160" target="_blank">151-160</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_161-170" target="_blank">161-170</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_171-180" target="_blank">171-160</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_181-190" target="_blank">181-190</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_191-200" target="_blank">191-200</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_201-210" target="_blank">201-210</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_211-220" target="_blank">211-220</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_221-230" target="_blank">221-230</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_231-240" target="_blank">231-240</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_241-250" target="_blank">241-250</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_251-260" target="_blank">251-260</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_261-270" target="_blank">261-270</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_271-280" target="_blank">271-260</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_281-290" target="_blank">281-290</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_291-300" target="_blank">291-300</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn7_301-303" target="_blank">301-303</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_1-10" target="_blank">1-10</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_11-20" target="_blank">11-20</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_21-30" target="_blank">21-30</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_31-40" target="_blank">31-40</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_41-50" target="_blank">41-50</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_51-60" target="_blank">51-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_61-70" target="_blank">61-70</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_71-80" target="_blank">71-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_81-90" target="_blank">81-90</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_91-100" target="_blank">91-100</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_101-110" target="_blank">101-110</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_111-120" target="_blank">111-120</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_121-130" target="_blank">121-130</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_131-140" target="_blank">131-140</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_141-150" target="_blank">141-150</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_151-160" target="_blank">151-160</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_161-170" target="_blank">161-170</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_171-180" target="_blank">171-160</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_181-190" target="_blank">181-190</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_191-200" target="_blank">191-200</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_201-210" target="_blank">201-210</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_211-220" target="_blank">211-220</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_221-230" target="_blank">221-230</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_231-240" target="_blank">231-240</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_241-250" target="_blank">241-250</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_251-260" target="_blank">251-260</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_261-270" target="_blank">261-270</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_271-280" target="_blank">271-260</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_281-290" target="_blank">281-290</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_291-300" target="_blank">291-300</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_301-310" target="_blank">301-310</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_311-320" target="_blank">311-320</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_321-330" target="_blank">321-330</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_331-340" target="_blank">331-340</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_341-350" target="_blank">341-350</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_351-360" target="_blank">351-360</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_361-370" target="_blank">361-370</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_371-380" target="_blank">371-360</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_381-390" target="_blank">381-390</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_391-400" target="_blank">391-400</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_401-410" target="_blank">401-410</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_411-420" target="_blank">411-420</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_421-430" target="_blank">421-430</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_431-440" target="_blank">431-440</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_441-450" target="_blank">441-450</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_451-460" target="_blank">451-460</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_461-470" target="_blank">461-470</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_471-480" target="_blank">471-460</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_481-490" target="_blank">481-490</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn8_491-500" target="_blank">491-500</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_1-10" target="_blank">1-10</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_11-20" target="_blank">11-20</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_21-30" target="_blank">21-30</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_31-40" target="_blank">31-40</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_41-50" target="_blank">41-50</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_51-60" target="_blank">51-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_61-70" target="_blank">61-70</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_71-80" target="_blank">71-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_81-90" target="_blank">81-90</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_91-100" target="_blank">91-100</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_101-110" target="_blank">101-110</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_111-120" target="_blank">111-120</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_121-130" target="_blank">121-130</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_131-140" target="_blank">131-140</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_141-150" target="_blank">141-150</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_151-160" target="_blank">151-160</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_161-170" target="_blank">161-170</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_171-180" target="_blank">171-160</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_181-190" target="_blank">181-190</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_191-200" target="_blank">191-200</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_201-210" target="_blank">201-210</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_211-220" target="_blank">211-220</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_221-230" target="_blank">221-230</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_231-240" target="_blank">231-240</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_241-250" target="_blank">241-250</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_251-260" target="_blank">251-260</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_261-270" target="_blank">261-270</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_271-280" target="_blank">271-260</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_281-290" target="_blank">281-290</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_291-300" target="_blank">291-300</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_301-310" target="_blank">301-310</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_311-320" target="_blank">311-320</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_321-330" target="_blank">321-330</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_331-340" target="_blank">331-340</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_341-350" target="_blank">341-350</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_351-360" target="_blank">351-360</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_361-370" target="_blank">361-370</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_371-380" target="_blank">371-360</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_381-390" target="_blank">381-390</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_391-400" target="_blank">391-400</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_401-410" target="_blank">401-410</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_411-420" target="_blank">411-420</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_421-430" target="_blank">421-430</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_431-440" target="_blank">431-440</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_441-450" target="_blank">441-450</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_451-460" target="_blank">451-460</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_461-470" target="_blank">461-470</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_471-480" target="_blank">471-460</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn9_481-489" target="_blank">481-489</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_1-10" target="_blank">1-10</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_11-20" target="_blank">11-20</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_21-30" target="_blank">21-30</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_31-40" target="_blank">31-40</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_41-50" target="_blank">41-50</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_51-60" target="_blank">51-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_61-70" target="_blank">61-70</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_71-80" target="_blank">71-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_81-90" target="_blank">81-90</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_91-100" target="_blank">91-100</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_101-110" target="_blank">101-110</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_111-120" target="_blank">111-120</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_121-130" target="_blank">121-130</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_131-140" target="_blank">131-140</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_141-150" target="_blank">141-150</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_151-160" target="_blank">151-160</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_161-170" target="_blank">161-170</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_171-180" target="_blank">171-160</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_181-190" target="_blank">181-190</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_191-200" target="_blank">191-200</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_201-210" target="_blank">201-210</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_211-220" target="_blank">211-220</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_221-230" target="_blank">221-230</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_231-240" target="_blank">231-240</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_241-250" target="_blank">241-250</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_251-260" target="_blank">251-260</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_261-270" target="_blank">261-270</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_271-280" target="_blank">271-260</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_281-290" target="_blank">281-290</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_291-300" target="_blank">291-300</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_301-310" target="_blank">301-310</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_311-320" target="_blank">311-320</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_321-330" target="_blank">321-330</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_331-340" target="_blank">331-340</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_341-350" target="_blank">341-350</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_351-360" target="_blank">351-360</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_361-370" target="_blank">361-370</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_371-380" target="_blank">371-360</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_381-390" target="_blank">381-390</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_391-400" target="_blank">391-400</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_401-410" target="_blank">401-410</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn10_411-415" target="_blank">411-415</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_1-10" target="_blank">1-10</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_11-20" target="_blank">11-20</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_21-30" target="_blank">21-30</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_31-40" target="_blank">31-40</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_41-50" target="_blank">41-50</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_51-60" target="_blank">51-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_61-70" target="_blank">61-70</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_71-80" target="_blank">71-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_81-90" target="_blank">81-90</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_91-100" target="_blank">91-100</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_101-110" target="_blank">101-110</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_111-120" target="_blank">111-120</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_121-130" target="_blank">121-130</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_131-140" target="_blank">131-140</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_141-150" target="_blank">141-150</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_151-160" target="_blank">151-160</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_161-170" target="_blank">161-170</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_171-180" target="_blank">171-160</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn11_181-183" target="_blank">181-183</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn12_1-10" target="_blank">1-10</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn12_11-20" target="_blank">11-20</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn12_21-30" target="_blank">21-30</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn12_31-40" target="_blank">31-40</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn12_41-50" target="_blank">41-50</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn12_51-60" target="_blank">51-60</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn12_61-70" target="_blank">61-70</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn12_71" target="_blank">71</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn13_1-10" target="_blank">1-10</a></li>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn13_11-12" target="_blank">11-12</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://ktr-skmt.github.io/ramseys-party-game/turn14" target="_blank">1</a></li>
+        </ul>
+      </td>
+    </tr>
+  </table>
 </body>
 
 </html>
