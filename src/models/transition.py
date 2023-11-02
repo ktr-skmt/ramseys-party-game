@@ -16,3 +16,11 @@ class Transition:
             "current_turn_variant": self.current_turn_variant,
             "next_turn_variant": self.next_turn_variant,
         }
+
+
+def json_to_transition(json: dict[str, int]) -> Transition:
+    return Transition(
+        current_turn=json["current_turn"],
+        current_turn_variant=json["current_turn_variant"],
+        next_turn_variant=json["next_turn_variant"],
+    )

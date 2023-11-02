@@ -12,19 +12,26 @@ def transition(line: str) -> tuple[int, int]:
 
 
 def main() -> None:
-    goals: dict[int, list[int]] = {}
+    goals: list[dict[str, int | list[int]]] = []
     for next_turn in range(15, 1, -1):
         current_turn: int = next_turn - 1
         print("current_turn")
         print(current_turn)
         with open(PATH_TO_OUT / f"{current_turn}.jsonl", mode="r", encoding="utf-8") as f:
-            number_of_variants: int = len([line for line in f])
+            number_of_variants: int = len(list(f))
         with open(PATH_TO_OUT / f"t_{current_turn}-{next_turn}.jsonl", mode="r", encoding="utf-8") as f:
             transitions: list[tuple[int, int]] = [transition(line) for line in f]
         sources: set[int] = {i for i, _ in transitions}
-        goals[current_turn] = [variant for variant in range(number_of_variants) if variant not in sources]
-    with open(PATH_TO_OUT / "goals.json", mode="w", encoding="utf-8") as f:
-        json.dump(goals, f, indent=4)
+        goals.append(
+            {
+                "turn": current_turn,
+                "goals": [variant for variant in range(number_of_variants) if variant not in sources],
+            }
+        )
+    with open(PATH_TO_OUT / "goals.jsonl", mode="w", encoding="utf-8") as f:
+        for goal in goals:
+            json.dump(goal, f, ensure_ascii=False)
+            f.write("\n")
 
 
 if __name__ == "__main__":

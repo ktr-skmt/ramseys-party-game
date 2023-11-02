@@ -83,7 +83,10 @@ def main() -> None:
         )
         print("len(transitions)")
         print(len(transitions))
-        transition_json_list: list[dict[str, int]] = [transition.to_dict() for transition in transitions]
+        transition_json_list: list[dict[str, int]] = []
+        for transition in transitions:
+            if (transition_json := transition.to_dict()) not in transition_json_list:
+                transition_json_list.append(transition_json)
         with open(PATH_TO_OUT / f"t_{current_turn}-{next_turn}.jsonl", mode="w", encoding="utf-8") as f:
             for transition_json in transition_json_list:
                 json.dump(transition_json, f, ensure_ascii=False)
