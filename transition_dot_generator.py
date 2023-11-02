@@ -134,7 +134,7 @@ def main() -> None:
         if territory.turn < 6
     ]
     transitions: list[Transition] = []
-    for turn in range(1, 6):
+    for turn in range(1, 5):
         with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition0-5" / "dot.js", mode="w", encoding="utf-8") as f:
@@ -158,7 +158,7 @@ def main() -> None:
         if 5 <= territory.turn < 7
     ]
     transitions: list[Transition] = []
-    for turn in range(5, 7):
+    for turn in range(5, 6):
         with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition5-6" / "dot.js", mode="w", encoding="utf-8") as f:
@@ -182,7 +182,7 @@ def main() -> None:
         if 6 <= territory.turn < 8
     ]
     transitions: list[Transition] = []
-    for turn in range(6, 8):
+    for turn in range(6, 7):
         with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition6-7" / "dot.js", mode="w", encoding="utf-8") as f:
@@ -206,7 +206,7 @@ def main() -> None:
         if 7 <= territory.turn < 9
     ]
     transitions: list[Transition] = []
-    for turn in range(7, 9):
+    for turn in range(7, 8):
         with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition7-8" / "dot.js", mode="w", encoding="utf-8") as f:
@@ -230,7 +230,7 @@ def main() -> None:
         if 8 <= territory.turn < 10
     ]
     transitions: list[Transition] = []
-    for turn in range(8, 10):
+    for turn in range(8, 9):
         with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition8-9" / "dot.js", mode="w", encoding="utf-8") as f:
@@ -254,7 +254,7 @@ def main() -> None:
         if 9 <= territory.turn < 11
     ]
     transitions: list[Transition] = []
-    for turn in range(9, 11):
+    for turn in range(9, 10):
         with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition9-10" / "dot.js", mode="w", encoding="utf-8") as f:
@@ -278,7 +278,7 @@ def main() -> None:
         if 10 <= territory.turn < 12
     ]
     transitions: list[Transition] = []
-    for turn in range(10, 12):
+    for turn in range(10, 11):
         with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition10-11" / "dot.js", mode="w", encoding="utf-8") as f:
@@ -302,7 +302,7 @@ def main() -> None:
         if 11 <= territory.turn < 13
     ]
     transitions: list[Transition] = []
-    for turn in range(11, 13):
+    for turn in range(11, 12):
         with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition11-12" / "dot.js", mode="w", encoding="utf-8") as f:
@@ -326,7 +326,7 @@ def main() -> None:
         if 12 <= territory.turn
     ]
     transitions: list[Transition] = []
-    for turn in range(12, 15):
+    for turn in range(12, 14):
         with open(PATH_TO_OUT / f"t_{turn}-{turn + 1}.jsonl", mode="r", encoding="utf-8") as f:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition12-14" / "dot.js", mode="w", encoding="utf-8") as f:
