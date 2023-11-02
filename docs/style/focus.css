@@ -1,0 +1,26 @@
+g.edge.emphasized>polygon {
+  stroke: #008000;
+  fill: #008000;
+}
+
+g.edge.emphasized>path {
+  stroke: #008000;
+}
+
+g.node.emphasized>ellipse {
+  stroke: #008000;
+  fill: #ffffff;
+}
+
+g.node.emphasized>text {
+  fill: #008000;
+}
+
+g.node.neighbour>ellipse {
+  stroke: #ff8c00;
+  fill: #ffffff;
+}
+
+g.node.neighbour>text {
+  fill: #ff8c00;
+}

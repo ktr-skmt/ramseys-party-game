@@ -17,8 +17,8 @@ def get_edges(graph: nx.Graph) -> list[tuple[int, int, dict[str, str]]]:
     return [(i, j, {"color": graph.edges[i, j]["color"]}) for i, j in nx.line_graph(graph)]
 
 
-def contains_a_specific_edge(g: nx.Graph, edge: tuple[int, int]) -> bool:
-    for i, j in nx.line_graph(g):
+def contains_a_specific_edge_(edges: list[tuple[int, int]], edge: tuple[int, int]) -> bool:
+    for i, j in edges:
         if i < j:
             if edge[0] < edge[1] and edge == (i, j):
                 return True
@@ -30,6 +30,10 @@ def contains_a_specific_edge(g: nx.Graph, edge: tuple[int, int]) -> bool:
             if edge[1] < edge[0] and edge == (i, j):
                 return True
     return False
+
+
+def contains_a_specific_edge(g: nx.Graph, edge: tuple[int, int]) -> bool:
+    return contains_a_specific_edge_(nx.line_graph(g), edge)
 
 
 def remaining_edges(g: nx.Graph) -> list[tuple[int, int]]:

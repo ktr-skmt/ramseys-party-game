@@ -1,19 +1,12 @@
-from dataclasses import dataclass
 import json
 from pathlib import Path
 from typing import Final
 
 from src.models.transition import Transition, json_to_transition
+from src.models.territory import Territory
 
 PATH_TO_DIR: Final[Path] = Path(__file__).parent
 PATH_TO_OUT: Final[Path] = PATH_TO_DIR / "out"
-
-
-@dataclass
-class Territory:
-    turn: int
-    variant: int
-    what_color_wins: str | None = None
 
 
 def has_no_none(territories: list[str | None]) -> bool:
