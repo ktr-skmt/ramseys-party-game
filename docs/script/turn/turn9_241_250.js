@@ -1,1 +1,1 @@
-import {dot9_241_250} from './dot9_241_250.js';for (let i = 240; i < 250; i++) { d3.select(`#graph${i}`).graphviz().fade(false).renderDot(dot9_241_250.description[i].join('')); }
+import {dot9_241_250} from './dot9_241_250.js';for (let i = 0; i < 10; i++) { d3.select(`#graph${i}`).graphviz().fade(false).renderDot(dot9_241_250.description[i].join('')); }

@@ -1,1 +1,1 @@
-import {dot8_51_60} from './dot8_51_60.js';for (let i = 50; i < 60; i++) { d3.select(`#graph${i}`).graphviz().fade(false).renderDot(dot8_51_60.description[i].join('')); }
+import {dot8_51_60} from './dot8_51_60.js';for (let i = 0; i < 10; i++) { d3.select(`#graph${i}`).graphviz().fade(false).renderDot(dot8_51_60.description[i].join('')); }

@@ -1,1 +1,1 @@
-import {dot9_111_120} from './dot9_111_120.js';for (let i = 110; i < 120; i++) { d3.select(`#graph${i}`).graphviz().fade(false).renderDot(dot9_111_120.description[i].join('')); }
+import {dot9_111_120} from './dot9_111_120.js';for (let i = 0; i < 10; i++) { d3.select(`#graph${i}`).graphviz().fade(false).renderDot(dot9_111_120.description[i].join('')); }

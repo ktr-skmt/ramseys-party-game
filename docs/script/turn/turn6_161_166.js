@@ -1,1 +1,1 @@
-import {dot6_161_166} from './dot6_161_166.js';for (let i = 160; i < 166; i++) { d3.select(`#graph${i}`).graphviz().fade(false).renderDot(dot6_161_166.description[i].join('')); }
+import {dot6_161_166} from './dot6_161_166.js';for (let i = 0; i < 6; i++) { d3.select(`#graph${i}`).graphviz().fade(false).renderDot(dot6_161_166.description[i].join('')); }

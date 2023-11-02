@@ -1,1 +1,1 @@
-import {dot11_131_140} from './dot11_131_140.js';for (let i = 130; i < 140; i++) { d3.select(`#graph${i}`).graphviz().fade(false).renderDot(dot11_131_140.description[i].join('')); }
+import {dot11_131_140} from './dot11_131_140.js';for (let i = 0; i < 10; i++) { d3.select(`#graph${i}`).graphviz().fade(false).renderDot(dot11_131_140.description[i].join('')); }
