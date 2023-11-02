@@ -23,7 +23,7 @@ def ranks_dot(turn_number_of_variants_pairs: list[tuple[int, int]]) -> str:
 
 
 def node_dot(turn: int, variant: int, color: str) -> str:
-    return f'"{turn}-{variant + 1}" [fillcolor = {color}, style = filled];'
+    return f'"{turn}-{variant + 1}" [fillcolor = "{color}", style = "filled"];'
 
 
 def nodes_dot(turn_variant_color_tuples: list[tuple[int, int, str]]) -> str:
