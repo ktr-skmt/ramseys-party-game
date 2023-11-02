@@ -24,7 +24,7 @@ def ranks_dot(turn_number_of_variants_pairs: list[tuple[int, int]]) -> str:
 
 
 def node_dot(turn: int, variant: int, color: str) -> str:
-    return f'"{turn}-{variant + 1}" [fillcolor = "{color}", style = "filled"];'
+    return f'"{turn}-{variant + 1}" [fillcolor = "{"#0000FF" if color == "blue" else "#FF0000"}", style = "filled"];'
 
 
 def nodes_dot(turn_variant_color_tuples: list[tuple[int, int, str]]) -> str:
@@ -33,7 +33,7 @@ def nodes_dot(turn_variant_color_tuples: list[tuple[int, int, str]]) -> str:
 
 def link_dot(current_turn: int, current_variant: int, next_variant: int) -> str:
     color: str = "blue" if current_turn % 2 else "red"
-    return f'"{current_turn}-{current_variant}" -> "{current_turn + 1}-{next_variant}" [color = {color}];'
+    return f'"{current_turn}-{current_variant + 1}" -> "{current_turn + 1}-{next_variant + 1}" [color = {color}];'
 
 
 def links_dot(transitions: list[Transition]) -> str:
