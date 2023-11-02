@@ -2,7 +2,7 @@ import { showModal } from './dotGraph.js';
 
 export const focus = () => {
   const regexEdge = /"([0-9]+-[0-9]+)"\s->\s"([0-9]+-[0-9]+)+"/;
-  const regexNode = /^("[0-9]+-[0-9]+";)+$/;
+  const regexNode = /^("[0-9]+-[0-9]+" \[fillcolor)+$/;
   const regexNodeName = /"([0-9]+-[0-9]+)";/g;
   const edges = [];
   const nodes = [];
