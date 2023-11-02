@@ -115,7 +115,7 @@ def main() -> None:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "dot.js", mode="w", encoding="utf-8") as f:
         text: str = (
-            "export const dot = {'description': [["
+            "const dot = {'description': [["
             + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
             + "]]}"
         )
@@ -139,7 +139,7 @@ def main() -> None:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition0-5" / "dot.js", mode="w", encoding="utf-8") as f:
         text: str = (
-            "export const dot = {'description': [["
+            "const dot = {'description': [["
             + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
             + "]]}"
         )
@@ -163,7 +163,7 @@ def main() -> None:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition5-6" / "dot.js", mode="w", encoding="utf-8") as f:
         text: str = (
-            "export const dot = {'description': [["
+            "const dot = {'description': [["
             + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
             + "]]}"
         )
@@ -187,7 +187,7 @@ def main() -> None:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition6-7" / "dot.js", mode="w", encoding="utf-8") as f:
         text: str = (
-            "export const dot = {'description': [["
+            "const dot = {'description': [["
             + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
             + "]]}"
         )
@@ -211,7 +211,7 @@ def main() -> None:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition7-8" / "dot.js", mode="w", encoding="utf-8") as f:
         text: str = (
-            "export const dot = {'description': [["
+            "const dot = {'description': [["
             + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
             + "]]}"
         )
@@ -235,7 +235,7 @@ def main() -> None:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition8-9" / "dot.js", mode="w", encoding="utf-8") as f:
         text: str = (
-            "export const dot = {'description': [["
+            "const dot = {'description': [["
             + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
             + "]]}"
         )
@@ -259,7 +259,7 @@ def main() -> None:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition9-10" / "dot.js", mode="w", encoding="utf-8") as f:
         text: str = (
-            "export const dot = {'description': [["
+            "const dot = {'description': [["
             + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
             + "]]}"
         )
@@ -283,7 +283,7 @@ def main() -> None:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition10-11" / "dot.js", mode="w", encoding="utf-8") as f:
         text: str = (
-            "export const dot = {'description': [["
+            "const dot = {'description': [["
             + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
             + "]]}"
         )
@@ -307,7 +307,7 @@ def main() -> None:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition11-12" / "dot.js", mode="w", encoding="utf-8") as f:
         text: str = (
-            "export const dot = {'description': [["
+            "const dot = {'description': [["
             + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
             + "]]}"
         )
@@ -331,7 +331,7 @@ def main() -> None:
             transitions.extend([json_to_transition(json.loads(line)) for line in f])
     with open(PATH_TO_SCRIPT / "transition12-14" / "dot.js", mode="w", encoding="utf-8") as f:
         text: str = (
-            "export const dot = {'description': [["
+            "const dot = {'description': [["
             + transition_dot(transitions, turn_number_of_variants_pairs, turn_variant_color_tuples)
             + "]]}"
         )
