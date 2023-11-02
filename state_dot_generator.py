@@ -117,7 +117,7 @@ def main() -> None:
             case 4:
                 for i in range(2):
                     base: int = i * 10
-                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}-{base + 10}.js", mode="w", encoding="utf-8") as f:
+                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}_{base + 10}.js", mode="w", encoding="utf-8") as f:
                         text: str = (
                             f"export const dot{turn}_{base + 1}_{base + 10} = "
                             + "{"
@@ -132,7 +132,7 @@ def main() -> None:
                             + "]}"
                         )
                         f.write(text)
-                with open(PATH_TO_TURN / f"dot{turn}_21-25.js", mode="w", encoding="utf-8") as f:
+                with open(PATH_TO_TURN / f"dot{turn}_21_25.js", mode="w", encoding="utf-8") as f:
                     text: str = (
                         f"export const dot{turn}_21_25 = "
                         + "{"
@@ -150,7 +150,7 @@ def main() -> None:
             case 5:
                 for i in range(6):
                     base: int = i * 10
-                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}-{base + 10}.js", mode="w", encoding="utf-8") as f:
+                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}_{base + 10}.js", mode="w", encoding="utf-8") as f:
                         text: str = (
                             f"export const dot{turn}_{base + 1}_{base + 10} = "
                             + "{"
@@ -165,7 +165,7 @@ def main() -> None:
                             + "]}"
                         )
                         f.write(text)
-                with open(PATH_TO_TURN / f"dot{turn}_61-64.js", mode="w", encoding="utf-8") as f:
+                with open(PATH_TO_TURN / f"dot{turn}_61_64.js", mode="w", encoding="utf-8") as f:
                     text: str = (
                         f"export const dot{turn}_61_64 = "
                         + "{"
@@ -183,7 +183,7 @@ def main() -> None:
             case 6:
                 for i in range(16):
                     base: int = i * 10
-                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}-{base + 10}.js", mode="w", encoding="utf-8") as f:
+                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}_{base + 10}.js", mode="w", encoding="utf-8") as f:
                         text: str = (
                             f"export const dot{turn}_{base + 1}_{base + 10} = "
                             + "{"
@@ -198,7 +198,7 @@ def main() -> None:
                             + "]}"
                         )
                         f.write(text)
-                with open(PATH_TO_TURN / f"dot{turn}_161-166.js", mode="w", encoding="utf-8") as f:
+                with open(PATH_TO_TURN / f"dot{turn}_161_166.js", mode="w", encoding="utf-8") as f:
                     text: str = (
                         f"export const dot{turn}_161_166 = "
                         + "{"
@@ -216,7 +216,7 @@ def main() -> None:
             case 7:
                 for i in range(30):
                     base: int = i * 10
-                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}-{base + 10}.js", mode="w", encoding="utf-8") as f:
+                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}_{base + 10}.js", mode="w", encoding="utf-8") as f:
                         text: str = (
                             f"export const dot{turn}_{base + 1}_{base + 10} = "
                             + "{"
@@ -231,7 +231,7 @@ def main() -> None:
                             + "]}"
                         )
                         f.write(text)
-                with open(PATH_TO_TURN / f"dot{turn}_301-303.js", mode="w", encoding="utf-8") as f:
+                with open(PATH_TO_TURN / f"dot{turn}_301_303.js", mode="w", encoding="utf-8") as f:
                     text: str = (
                         f"export const dot{turn}_301_303 = "
                         + "{"
@@ -249,7 +249,7 @@ def main() -> None:
             case 8:
                 for i in range(50):
                     base: int = i * 10
-                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}-{base + 10}.js", mode="w", encoding="utf-8") as f:
+                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}_{base + 10}.js", mode="w", encoding="utf-8") as f:
                         text: str = (
                             f"export const dot{turn}_{base + 1}_{base + 10} = "
                             + "{"
@@ -267,7 +267,7 @@ def main() -> None:
             case 9:
                 for i in range(48):
                     base: int = i * 10
-                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}-{base + 10}.js", mode="w", encoding="utf-8") as f:
+                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}_{base + 10}.js", mode="w", encoding="utf-8") as f:
                         text: str = (
                             f"export const dot{turn}_{base + 1}_{base + 10} = "
                             + "{"
@@ -282,7 +282,7 @@ def main() -> None:
                             + "]}"
                         )
                         f.write(text)
-                with open(PATH_TO_TURN / f"dot{turn}_481-489.js", mode="w", encoding="utf-8") as f:
+                with open(PATH_TO_TURN / f"dot{turn}_481_489.js", mode="w", encoding="utf-8") as f:
                     text: str = (
                         f"export const dot{turn}_481_489 = "
                         + "{"
@@ -300,7 +300,7 @@ def main() -> None:
             case 10:
                 for i in range(41):
                     base: int = i * 10
-                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}-{base + 10}.js", mode="w", encoding="utf-8") as f:
+                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}_{base + 10}.js", mode="w", encoding="utf-8") as f:
                         text: str = (
                             f"export const dot{turn}_{base + 1}_{base + 10} = "
                             + "{"
@@ -315,7 +315,7 @@ def main() -> None:
                             + "]}"
                         )
                         f.write(text)
-                with open(PATH_TO_TURN / f"dot{turn}_411-415.js", mode="w", encoding="utf-8") as f:
+                with open(PATH_TO_TURN / f"dot{turn}_411_415.js", mode="w", encoding="utf-8") as f:
                     text: str = (
                         f"export const dot{turn}_411_415 = "
                         + "{"
@@ -333,7 +333,7 @@ def main() -> None:
             case 11:
                 for i in range(18):
                     base: int = i * 10
-                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}-{base + 10}.js", mode="w", encoding="utf-8") as f:
+                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}_{base + 10}.js", mode="w", encoding="utf-8") as f:
                         text: str = (
                             f"export const dot{turn}_{base + 1}_{base + 10} = "
                             + "{"
@@ -348,7 +348,7 @@ def main() -> None:
                             + "]}"
                         )
                         f.write(text)
-                with open(PATH_TO_TURN / f"dot{turn}_181-183.js", mode="w", encoding="utf-8") as f:
+                with open(PATH_TO_TURN / f"dot{turn}_181_183.js", mode="w", encoding="utf-8") as f:
                     text: str = (
                         f"export const dot{turn}_181_183 = "
                         + "{"
@@ -366,7 +366,7 @@ def main() -> None:
             case 12:
                 for i in range(7):
                     base: int = i * 10
-                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}-{base + 10}.js", mode="w", encoding="utf-8") as f:
+                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}_{base + 10}.js", mode="w", encoding="utf-8") as f:
                         text: str = (
                             f"export const dot{turn}_{base + 1}_{base + 10} = "
                             + "{"
@@ -399,7 +399,7 @@ def main() -> None:
             case 13:
                 for i in range(1):
                     base: int = i * 10
-                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}-{base + 10}.js", mode="w", encoding="utf-8") as f:
+                    with open(PATH_TO_TURN / f"dot{turn}_{base + 1}_{base + 10}.js", mode="w", encoding="utf-8") as f:
                         text: str = (
                             f"export const dot{turn}_{base + 1}_{base + 10} = "
                             + "{"
@@ -414,7 +414,7 @@ def main() -> None:
                             + "]}"
                         )
                         f.write(text)
-                with open(PATH_TO_TURN / f"dot{turn}_11-12.js", mode="w", encoding="utf-8") as f:
+                with open(PATH_TO_TURN / f"dot{turn}_11_12.js", mode="w", encoding="utf-8") as f:
                     text: str = (
                         f"export const dot{turn}_11_12 = "
                         + "{"
